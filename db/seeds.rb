@@ -5,3 +5,40 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'faker'
+
+
+100.times do
+
+  user = User.new({
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    stname: Faker::Address.street_name,
+    stnumber: Faker::Address.building_number,
+    city: Faker::Address.city,
+    zipcode: Faker::Address.zip,
+    tel: Faker::PhoneNumber.phone_number
+    })
+
+  user.save!
+end
+
+sizes = ["XS","S","M","L","XL","XXL"]
+gear_type = ["Skis","Boots","Goggles","Sticks","Snowboard","Suit"]
+brand = ["Salomon","The North Face","Nordica","Athalon","Sorel"]
+
+50.times do |index|
+
+  gear = Gear.new({
+    item: gear_type.sample,
+    description: Faker::Lorem.sentence(3, true),
+    size: sizes.sample,
+    brand: brand.sample,
+    price: Faker::Commerce.price,
+    user_id: User.find(index + 1)
+
+    })
+
+  gear.save!
+
+end
