@@ -23,8 +23,8 @@
         <td><%= gear.size %></td>
         <td><%= gear.brand %></td>
         <td><%= gear.price %></td>
-        <td><%= link_to 'Show', user_gear_path %></td>
-        <td><%= link_to 'Edit', edit_user_gear(gear) %></td>
+        <td><%= link_to 'Show', gear %></td>
+        <td><%= link_to 'Edit', edit_gear_path(gear) %></td>
         <td><%= link_to 'Destroy', gear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -33,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Gear', new_user_gear_path(:user_id) %>
+<%= link_to 'New Gear', new_gear_path %>
