@@ -8,6 +8,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def show
      @user = User.find(set_user)
+     @gears = @user.gears
   end
 
   def new

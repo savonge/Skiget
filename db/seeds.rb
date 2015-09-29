@@ -35,7 +35,8 @@ brand = ["Salomon","The North Face","Nordica","Athalon","Sorel"]
     size: sizes.sample,
     brand: brand.sample,
     price: Faker::Commerce.price,
-    user_id: User.find(index + 1)
+    user_id: rand(1..20)
+    # user_id: User.find(index + 1)
 
     })
 
