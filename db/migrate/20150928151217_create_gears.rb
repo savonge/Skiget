@@ -6,7 +6,6 @@ class CreateGears < ActiveRecord::Migration
       t.string :size
       t.string :brand
       t.integer :price
-
       t.timestamps null: false
     end
   end

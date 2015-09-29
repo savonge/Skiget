@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  belongs_to :gear
-  belongs_to :reservation
+  has_many :gears
+  has_many :reservations
 end
