@@ -1,4 +1,4 @@
 class Reservation < ActiveRecord::Base
-  belongs_to :gear
-  belongs_to :user
+  belongs_to :gear, dependent: :destroy
+  belongs_to :user, dependent: :destroy
 end

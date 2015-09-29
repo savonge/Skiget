@@ -1,5 +1,5 @@
 class GearsController < ApplicationController
-  before_action :set_gear, only: [:show, :edit, :update, :destroy]
+  before_action :find_user
 
   # GET /gears
   # GET /gears.json
@@ -24,18 +24,20 @@ class GearsController < ApplicationController
   # POST /gears
   # POST /gears.json
   def create
-    @gear = Gear.new(gear_params)
+    @gear = @user.gears.build(gear_params)
+    @gear.save
 
     respond_to do |format|
       if @gear.save
-        format.html { redirect_to @gear, notice: 'Gear was successfully created.' }
+        format.html { redirect_to @user, notice: 'Gear was successfully created.' }
         format.json { render :show, status: :created, location: @gear }
       else
         format.html { render :new }
         format.json { render json: @gear.errors, status: :unprocessable_entity }
       end
     end
-  end
+
+   end
 
   # PATCH/PUT /gears/1
   # PATCH/PUT /gears/1.json
@@ -63,8 +65,8 @@ class GearsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_gear
-      @gear = Gear.find(params[:id])
+    def find_user
+      @user = User.find(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
