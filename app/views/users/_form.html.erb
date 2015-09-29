@@ -1,0 +1,19 @@
+<%= simple_form_for([@user]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name, label: 'Name'%>
+    <%= f.input :last_name,label: 'Last Name' %>
+    <%= f.input :stname,label: 'Street' %>
+    <%= f.input :stnumber,label: 'Nr' %>
+    <%= f.input :city,label: 'City' %>
+    <%= f.input :zipcode,label: 'zip' %>
+    <%= f.input :tel,label: 'Telephone' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+

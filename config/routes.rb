@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :gears
+  resources :users do
+    resources :gears
+  end
 
-
-root 'gears#index'
+root 'users#index'
 
 
 
