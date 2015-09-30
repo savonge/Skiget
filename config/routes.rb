@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :gears
   end
 
-root 'users#index'
+root 'welcome#main'
 
 
 

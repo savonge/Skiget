@@ -1,0 +1,112 @@
+/* -------------------------------------
+ * SASS code SPECIFIC TO your home page
+ * (margin/padding adjustments, background image, etc..)
+ * ------------------------------------- */
+
+@charset "utf-8";
+
+.full {
+  background-image: url("snow.jpg");
+  overflow: hidden;
+  position: fixed;
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  z-index: -20;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+}
+
+.topi{
+  margin-top:25%;
+
+}
+
+
+
+.access {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  height: 70px;
+  width: 900px;
+  top: 45%;
+  left: 50%;
+  margin-left: -450px;
+
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.navs {
+  overflow: hidden;
+  position: fixed;
+  z-index: 3;
+  height: 70px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  padding: 15px;
+  background-color:red;
+
+}
+
+.menu {
+  overflow: hidden;
+  position: fixed;
+  z-index: 3;
+  height: 30px;
+  width: 300px;
+  font-size: 15pt;
+  top: -15px;
+  right: 50px;
+  padding: 15px;
+  font-style: normal;
+  font-family: "Arial", sans-serif;
+  vertical-align: middle;
+}
+
+
+.field {
+  height: 70px;
+  width: 250px;
+  background-color: #fff;
+  font-size: 30pt;
+padding-left:10px;
+  float: left;
+  border-style: none;
+  margin-right:7px;
+}
+.button {
+  height: 70px;
+  width: 70px;
+  background-color: black;
+  color: #ffffff;
+  font-size: 30pt;
+  padding: 15px;
+  float: left;
+  border-style: none;
+  text-align: center;
+  margin-right:2px;
+}
+
+.button :hover {
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  color: #ffffff;
+  font-size: 30pt;
+  padding: 15px;
+  float: left;
+  border-style: none;
+  text-align: center;
+  margin-right:2px;
+}
+ul#menu li {
+  display: inline;
+  color: #000000;
+  z-index:100;
+}

@@ -66,3 +66,7 @@ end
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
 gem 'faker'
+
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
