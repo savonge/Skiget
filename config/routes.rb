@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :gears
   end
 
+  get 'searchs/gears' => "searchs#gears"
+
 root 'welcome#main'
 
 

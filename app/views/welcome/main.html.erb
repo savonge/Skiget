@@ -16,9 +16,9 @@
 <div class='col-md-3'>
         <div class="form-group">
            <!-- <input type="text" class="form-control" placeholder="Search"> -->
-           <%= form_tag users_path, method: :get, :class => "form-group" do%>
-<p><%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search" %></p>
-
+           <%= form_tag searchs_gears_path, method: :get, :class => "form-group" do %>
+          <p><%= text_field_tag :city, params[:city], class: "form-control", placeholder: "Search" %></p>
+          <p><%= text_field_tag :item, params[:item], class: "form-control", placeholder: "Search Item (gear)" %></p>
 
            </div>
     </div>
