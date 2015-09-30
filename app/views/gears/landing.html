@@ -1,36 +1,20 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="home.scss">
+<title>Untitled Document</title>
+</head>
 
-<h1>Listing Gears</h1>
+<body>
+<div class="bg"></div>
+<div class="access"><input type="text" class="field" placeholder="Location"><input type="text" class="field" placeholder="start"><input type="text" class="field" placeholder="end"><input type="button" class="button" onclick="https://skiget.herokuapp.com/';" value=">" /></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Description</th>
-      <th>Size</th>
-      <th>Brand</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="nav"><img src="http://postimg.org/image/tdqdxl20t/" height="45px" alt=""/>
+<div class="menu"><p></div>
+</div>
 
-    <% @gears.each do |gear| %>
-      <tr>
-        <td><%= gear.item %></td>
-        <td><%= gear.description %></td>
-        <td><%= gear.size %></td>
-        <td><%= gear.brand %></td>
-        <td><%= gear.price %></td>
-        <td><%= link_to 'Show', gear %></td>
-        <td><%= link_to 'Edit', edit_gear_path(gear) %></td>
-        <td><%= link_to 'Destroy', gear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Gear', new_gear_path %>
+
+
+</body></html>
