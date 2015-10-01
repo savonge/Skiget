@@ -6,7 +6,7 @@
 @charset "utf-8";
 
 .full {
-  background-image: url("snow2.jpg");
+  background-image: image-url("snow2.jpg");
   overflow: hidden;
   position: fixed;
   background-repeat: no-repeat;
@@ -148,7 +148,7 @@ ul#menu li {
 padding:20px;
   width:150px;
   height: 150px;
-  background-image: url("helmet2.jpg");
+  background-image: image-url("helmet2.jpg");
   overflow: hidden;
   background-repeat: no-repeat;
     background-position: center;
