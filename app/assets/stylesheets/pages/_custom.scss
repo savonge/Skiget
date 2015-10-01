@@ -135,3 +135,39 @@ ul#menu li {
   color: #000000;
   z-index:100;
 }
+
+
+.item {
+
+  font-style: normal;
+  font-family: "Arial", sans-serif;
+
+}
+
+.item_img {
+padding:20px;
+  width:150px;
+  height: 150px;
+  background-image: url("helmet2.jpg");
+  overflow: hidden;
+  background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.middle_results {
+overflow:scroll;
+overflow-x:hidden;
+position:absolute;
+  z-index: 1;
+  height: 100%;
+  width: 700px;
+  top: 100px;
+  left: 30%;
+  margin-left: -350px;
+}
+
+#left_results {
+  border-left: black solid thin;
+}
