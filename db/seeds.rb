@@ -20,7 +20,10 @@ city = ["France","Austria","Switzerland"]
     stnumber: Faker::Address.building_number,
     city: city.sample,
     zipcode: Faker::Address.zip,
-    tel: Faker::PhoneNumber.phone_number
+    tel: Faker::PhoneNumber.phone_number,
+    email: Faker::Internet.email,
+    password: rand(11111111..88888888)
+
     })
 
   user.save!
