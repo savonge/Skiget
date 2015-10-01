@@ -22,7 +22,6 @@ class ResevationController < ApplicationController
   # GET /gears/1/edit
   def edit
   end
-it
   # POST /gears
   # POST /gears.json
   def create
