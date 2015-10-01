@@ -23,6 +23,22 @@ gem 'turbolinks'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem "autoprefixer-rails"
+gem 'faker'
+gem 'omniauth-facebook'
+gem 'figaro'
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
+
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-plugin'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -38,8 +54,6 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem "devise"
-
-
 end
 
 group :development do
@@ -48,24 +62,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-
-end
-
-gem 'bootstrap-sass'
-gem 'font-awesome-sass'
-gem 'simple_form'
-gem "autoprefixer-rails"
-
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-plugin'
 end
 
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
-gem 'faker'
 
 
-gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
+
