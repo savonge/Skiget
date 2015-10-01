@@ -10,7 +10,8 @@
 <nav class="navbar-wagon">
   <div class="container navbar-wagon-container">
 
-    <a href="">
+
+    <a href="/">
       <%= image_tag "skiget_logo.png",:class => "logo" %>
     </a>
 
@@ -31,8 +32,8 @@
       <hr>
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+
+          <ul class="list-inline">
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
