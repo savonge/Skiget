@@ -13,10 +13,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default navi">
- <!-- <a class="navbar-brand" href="#">Skiget</a> --><%= link_to image_tag("skiget_logo.png", :alt => "skiget", :class => "logo"), root_path %><p class="navbar-text navbar-right"><a href="#" class="navbar-link nlc">Rent</a><a href="#" class="navbar-link nlc">Login</a><a href="#" class="navbar-link nlc">Sign in</a></p>
-</nav>
 
+<%= render "shared/navbar"%>
 <%= yield %>
 
 <script type="text/javascript">
