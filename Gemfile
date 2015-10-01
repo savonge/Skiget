@@ -53,7 +53,6 @@ group :development, :test do
   gem 'byebug'
   gem "better_errors"
   gem "binding_of_caller"
-  gem "devise"
 end
 
 group :development do
@@ -66,6 +65,6 @@ end
 
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
-
+gem "devise"
 
 
