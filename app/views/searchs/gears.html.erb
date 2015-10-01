@@ -1,16 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Gears</h1>
+<div class='col-md-3'  id='left_results'>
+<div class="checkbox"><label><input type="checkbox">Skis</label></div>
+<div class="checkbox"><label><input type="checkbox">Boots</label></div>
+<div class="checkbox"><label><input type="checkbox">Goggles</label></div>
+<div class="checkbox"><label><input type="checkbox">Sticks</label></div>
+<div class="checkbox"><label><input type="checkbox">Snowboard</label></div>
 
-<table>
+</div>
+
+
+<div class="middle_results">
+
+<table class="results">
   <thead>
     <tr>
-      <th>Item</th>
-      <th>Description</th>
-      <th>Size</th>
-      <th>Brand</th>
-      <th>Price</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -18,15 +22,25 @@
 
     <% @gears.each do |gear| %>
       <tr>
-        <td><%= gear.item %></td>
-        <td><%= gear.description %></td>
-        <td><%= gear.size %></td>
-        <td><%= gear.brand %></td>
-        <td><%= gear.price %></td>
+<td style="border-bottom: solid black thin; margin-top: 20px;"><div class="item_img"></div></td>
+        <td style="border-bottom: solid black thin; margin-top: 20px;"><h3><%= gear.item %></h3>
+        <strong>Gear Description:</strong><br><%= gear.description %><br>
+        <strong>Size:</strong><%= gear.size %><br>
+        <strong>Brand:</strong><%= gear.brand %><br>
+         <strong>Price per day:</strong><%= gear.price %><normal>$</normal><br>
+         <div class="checkbox"><label><input type="checkbox"> Rent it!</label></div>
+
+
+
+         </td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+
+  </div>
 
