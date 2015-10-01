@@ -8,6 +8,9 @@
 require 'faker'
 
 
+city = ["France","Austria","Switzerland"]
+
+
 100.times do
 
   user = User.new({
@@ -15,7 +18,7 @@ require 'faker'
     last_name: Faker::Name.last_name,
     stname: Faker::Address.street_name,
     stnumber: Faker::Address.building_number,
-    city: Faker::Address.city,
+    city: city.sample,
     zipcode: Faker::Address.zip,
     tel: Faker::PhoneNumber.phone_number
     })
@@ -23,7 +26,7 @@ require 'faker'
   user.save!
 end
 
-sizes = ["XS","S","M","L","XL","XXL"]
+sizes = ["S","M","L"]
 gear_type = ["Skis","Boots","Goggles","Sticks","Snowboard","Suit"]
 brand = ["Salomon","The North Face","Nordica","Athalon","Sorel"]
 

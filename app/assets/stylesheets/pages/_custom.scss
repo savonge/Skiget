@@ -6,7 +6,7 @@
 @charset "utf-8";
 
 .full {
-  background-image: url("snow.jpg");
+  background-image: url("snow2.jpg");
   overflow: hidden;
   position: fixed;
   background-repeat: no-repeat;
@@ -21,6 +21,31 @@
 
 .topi{
   margin-top:25%;
+
+}
+.logo{
+  height:45px;
+
+}
+
+.nlc{
+  padding-right:15px;
+  color:black;
+  margin-top:-10px;
+
+}
+
+.navi{
+  height:80px;
+  padding: 20px;
+  background-color: none !important;
+background:rgba(0,0,0,0.0) !important;
+border-style: none !important;
+border: none !important;
+  position:fixed;
+  top: 0;
+  z-index: 500;
+
 
 }
 
