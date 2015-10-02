@@ -1,16 +1,31 @@
 class ResevationController < ApplicationController
-  before_action :find_user
+  before_action :find_gear
 
   # GET /gears
   # GET /gears.json
   def index
-    Reservation.all
+  end
+
+def create
+    @gear = Gear.find(params)
+    @reservation = Reservation.new(reservation_params)
+    @reservation.gear = @gear
+    @reservation.save
+
+respond_to do |format|
+      if @reservation.save
+        format.html { redirect_to @user, notice: 'Reservation was successfully created.' }
+        format.json { render :show, status: :created, location: @reservation }
+      else
+        format.html { render :new }
+        format.json { render json: @gear.errors, status: :unprocessable_entity }
+      end
 
   end
 
-  # GET /gears/1
-  # GET /gears/1.json
   def show
+    @gear = Gear.find(params)
+     @reservation = @gear.reservation
 
   end
 
@@ -21,31 +36,11 @@ class ResevationController < ApplicationController
 
   # GET /gears/1/edit
   def edit
+     @reservation = Reservation.find(set_reservation)
   end
-  # POST /gears
-  # POST /gears.json
-  def create
-    @reservation = @user.gears.build(gear_params)
-    @reservation.save
-
-    respond_to do |format|
-      if @gear.save
-        format.html { redirect_to @user, notice: 'Gear was successfully created.' }
-        format.json { render :show, status: :created, location: @gear }
-      else
-        format.html { render :new }
-        format.json { render json: @gear.errors, status: :unprocessable_entity }
-      end
-    end
-
-   end
-
-  # PATCH/PUT /gears/1
-  # PATCH/PUT /gears/1.json
 
 
-  # DELETE /gears/1
-  # DELETE /gears/1.json
+
   def destroy
     @reservation.destroy
     respond_to do |format|
@@ -56,12 +51,14 @@ class ResevationController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def find_user
-      @user = User.find(params[:user_id])
+   def set_reservation
+      @reservation = Reservation.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def gear_params
-      params.require(:gear).permit(:item, :description, :size, :brand, :price)
+    def reservation_params
+      params.require(:reservation).permit(:gear_id, :start, :end)
     end
+
+
 end

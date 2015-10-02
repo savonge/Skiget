@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users do
-    resources :gears
+    resources :gears do
+      resources :reservation
   end
 
   get 'searchs/gears' => "searchs#gears"
