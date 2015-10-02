@@ -6,6 +6,8 @@
 <div class='col-md-3'>
   <div class='left_results'>
 
+
+
 <div class="checkbox"><label><input type="checkbox">Skis</label></div>
 <div class="checkbox"><label><input type="checkbox">Boots</label></div>
 <div class="checkbox"><label><input type="checkbox">Goggles</label></div>
@@ -33,12 +35,14 @@
         <strong>Size:</strong><%= gear.size %><br>
         <strong>Brand:</strong><%= gear.brand %><br>
          <strong>Price per day:</strong><%= gear.price %><normal>$</normal><br>
-         <div class="checkbox"><label><input type="checkbox"> Rent it!</label></div>
-
+         <%= form_tag reservations_path %>
+          <%= hidden_field_tag :gear_id, gear.id  %>
+          <%= submit_tag 'Rent it' %>
          </td>
-
       </tr>
     <% end %>
+
+
   </tbody>
 </table>
 </div>

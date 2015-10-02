@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   #devise_for :users
   resources :users do
     resources :gears
+
+  end
+
+
+resources :reservations , only: [:create]  do
+    resources :gears
   end
 
   get 'searchs/gears' => "searchs#gears"
