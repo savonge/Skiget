@@ -1,6 +1,11 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
 <p>
+  <strong>First Name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
   <strong>Last Name:</strong>
   <%= @user.last_name %>
 </p>
@@ -58,6 +63,6 @@
 
 
 
-<%= link_to 'Add gear', new_user_gear_path(@user) %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Add gear', new_user_gear_path(@user), class: 'btn btn-primary'  %>
+<%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-primary'%>
+<%= link_to 'Home', "/", class: 'btn btn-primary' %>
