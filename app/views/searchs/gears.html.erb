@@ -1,16 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<div class='col-md-3'  id='left_results'>
+<!--<% @gears.distinct(:item).pluck(:item).each do |list_item|%>
+    <%= list_item %>
+<% end %>-->
+<div class='col-md-3'>
+  <div class='left_results'>
+
 <div class="checkbox"><label><input type="checkbox">Skis</label></div>
 <div class="checkbox"><label><input type="checkbox">Boots</label></div>
 <div class="checkbox"><label><input type="checkbox">Goggles</label></div>
 <div class="checkbox"><label><input type="checkbox">Sticks</label></div>
 <div class="checkbox"><label><input type="checkbox">Snowboard</label></div>
-
+</div>
 </div>
 
 
-<div class="middle_results">
+<div class=" col-md-6">
 
 <table class="results">
   <thead>
@@ -30,17 +35,12 @@
          <strong>Price per day:</strong><%= gear.price %><normal>$</normal><br>
          <div class="checkbox"><label><input type="checkbox"> Rent it!</label></div>
 
-
-
          </td>
 
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
-
-
-  </div>
-
+<div class='col-md-3'></div>

@@ -168,6 +168,7 @@ position:absolute;
   margin-left: -350px;
 }
 
-#left_results {
-  border-left: black solid thin;
+.left_results {
+  top: 100px !important;
+  position: fixed;
 }
